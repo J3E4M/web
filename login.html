@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="form-container" id="signup">
+            <img src="logo.png" >
+            <h1 class="form-title">Create Account</h1>
+            <form id="registerForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="Name" id="username" placeholder="username" required>
+                </div>
+            
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="registerEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="registerPassword" placeholder="Password" required>
+                </div>
+                <button type="submit">SIGN UP</button>
+            </form>
+            <p class="or">or</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-apple"></i></a>
+            </div>
+            <div class="links">
+                <p>Already Have an Account?<a href="#" id="signInButton">  Sign In</a></p>
+                
+            </div>
+        </div>
+
+        <div class="form-container1" id="signIn">
+            <img src="logo.png" >
+            <h1 class="form-title">Login</h1>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="password" id="loginPassword" placeholder="Password" required>
+                </div>
+                <p class="recover"><a href="#">Recover Password</a></p>
+                <button type="submit">SIGN IN</button>
+            </form>
+            <p class="or">or</p>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icon"><i class="fa-brands fa-apple"></i></a>
+            </div>
+            <div class="links">
+                <p>Don't have an account yet?<a href="#" id="signUpButton">  Sign Up</a></p>
+                
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

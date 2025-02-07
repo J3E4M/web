@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="css/indexcssbackup1.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+    <button id="toggleSidebar" class="sidebar-toggle">☰</button>
+    <div class ="layout">
+        
+        <div class="sidebar">
+            <a href="indexbackup1.html" >
+                <img src="./imgs/logo-removebg-preview.png" class="logonav">
+            </a>
+            <div class="sidebar-search-wrapper">
+                <a href="login.html" style="display: flex; align-items: center; justify-content: center;" >
+                    <img src="./imgs/R.png" class="logonav1">
+                    <h3 id="userDisplay" style="color: white; font-family:'Courier New', Courier, monospace;">Login</h3>
+                </a>
+            </div>
+            <input onkeyup="searchsomething(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search something...">
+            <a onclick="searchproduct('all')" class="sidebar-items">
+                All product
+            </a>
+            <a onclick="searchproduct('shirt')" class="sidebar-items">
+                Shirt
+            </a>
+            <a onclick="searchproduct('pant')" class="sidebar-items">
+                Pant
+            </a>
+            <a onclick="searchproduct('hoodie')" class="sidebar-items">
+                Hoodie
+            </a>
+            <a href="orderlist.html" onclick="searchproduct('hoodie')" class="sidebar-items">
+                รายการคำสั่งซื้อ
+            </a>
+        </div>
+        <div class="main-content">
+        <nav>
+        
+            <div class="nav-container" >
+                <a href="indexbackup1.html">
+                    <img src="./imgs/logo-removebg-preview.png" class="logonav">
+                </a>
+                <div class="nav-profile">
+                    <p class="nav-profile-name">DRIP-SHOP</p>
+                    <div onclick="openCart()" style="cursor: pointer;" class="nav-profile-cart">
+                        <img src="./imgs/รูปmarket.png" class="logo-cart">
+                        <div id="cartcount" class="cartcount" style="display: none;">
+                            0
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+            <div class="container">
+                
+                <div id="productlist" class="product">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalDesc" class="modal" style="display: none;">
+        <div onclick="closeModal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>Detail</h2>
+            <br>
+            <div class="modaldesc-content">
+                <img id="mdd-img" class="modaldesc-img" src="https://th.bing.com/th/id/R.ccfa61a1cfd37bfe6a973ea25e4cd1b0?rik=FRHD3WsJAiukbQ&pid=ImgRaw&r=0" alt="">
+                <div class="modaldesc-detail">
+                    <p id="mdd-name" style="font-size: 1.5vw;">Product Name</p>
+                    <p id="mdd-price" style="font-size: 1.2vw;">500 THB</p>
+                    <br>
+                    <p id="mdd-desc" style="color: #adadad;">Live VLONE Die VLONE Live VLONE Die VLONE Live VLONE Die VLONE</p>
+                    <br>
+                    <div class="btn-control">
+                        <button onclick="closeModal()" class="btn">
+                            ปิด
+                        </button>
+                        <button onclick="addtocart()" class="btn btn-buy">
+                            เพิ่มลงตะกร้า
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalCart" class="modal" style="display: none;">
+        <div onclick="closeModal()" class="modal-bg"></div>
+        <div class="modal-page">
+            <div class="t1">
+                <h2>My cart</h2>
+                <div class="btn-control">
+                    <button onclick="closeModal()" class="btn">
+                        ปิดตะกร้า
+                    </button>
+                    <button  onclick="buynow()" class="btn btn-buy">
+                        ยืนยันการสั่งซื้อ
+                        <!-- <a href="order.html" style="color: white;">ยืนยันการสั่งซื้อ</a> -->
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div id="mycart" class="cartlist">
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
